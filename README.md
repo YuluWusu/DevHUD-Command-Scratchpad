@@ -101,54 +101,79 @@ DevHUD utilizes a lightweight, human-readable syntax that colorizes dynamically:
   - Cache response in Redis
 ```
 
-📥 Installation & Running
-Option 1: Standalone Portable Binary (Recommended)
-DevHUD is distributed as a self-contained, zero-dependency portable executable.
+---
 
-Download the latest release from the Releases page.
-Extract the archive to any directory on your computer (e.g., D:\Tools\DevHUD or your Desktop).
-Double-click DevHUD - Command Scratchpad.exe.
-No installation wizard, no registry tampering, no .NET runtime prerequisites required.
-Option 2: Build From Source
-Prerequisites
-Git
-.NET 8.0 SDK (Windows x64)
-Visual Studio 2022 (v17.8+) with .NET desktop development workload OR VS Code with C# Dev Kit.
-1. Clone the repository
-bash
+## 📥 Installation & Running
+
+### Option 1: Standalone Portable Binary (Recommended)
+DevHUD is distributed as a **self-contained, zero-dependency portable executable**.
+
+1. Download the latest release from the [Releases](https://github.com/your-username/DevHUD/releases) page.
+2. Extract the archive to any directory on your computer (e.g., `D:\Tools\DevHUD` or your Desktop).
+3. Double-click `DevHUD - Command Scratchpad.exe`.
+   - *No installation wizard, no registry tampering, no .NET runtime prerequisites required.*
+
+---
+
+### Option 2: Build From Source
+
+#### Prerequisites
+- [Git](https://git-scm.com/)
+- [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) (Windows x64)
+- Visual Studio 2022 (v17.8+) with *.NET desktop development* workload **OR** VS Code with C# Dev Kit.
+
+#### 1. Clone the repository
+```bash
 git clone https://github.com/your-username/DevHUD.git
 cd DevHUD
-2. Restore dependencies
-bash
+```
+
+#### 2. Restore dependencies
+```bash
 cd "DevHUD - Command Scratchpad/DevHUD - Command Scratchpad"
 dotnet restore
-3. Run in development mode
-bash
+```
+
+#### 3. Run in development mode
+```bash
 dotnet run
-4. Publish a Single-File Self-Contained Executable
-bash
+```
+
+#### 4. Publish a Single-File Self-Contained Executable
+```bash
 dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o bin/Publish
-The output executable with embedded icon and resources will be located at: bin/Publish/DevHUD - Command Scratchpad.exe
+```
+The output executable with embedded icon and resources will be located at:
+`bin/Publish/DevHUD - Command Scratchpad.exe`
 
-💾 Storage & Data Architecture
-DevHUD stores data locally on your machine with zero telemetry and complete privacy:
+---
 
-Active Storage:
-%LocalAppData%\DevHUD\scratchpad_data.json
-(Resolved to C:\Users\<Username>\AppData\Local\DevHUD\scratchpad_data.json)
-Stores all workspace tabs, notes, window states, and language preferences.
-Automated Daily Backups:
-%LocalAppData%\DevHUD\snapshots\snapshot_YYYYMMDD.json
-Automatically captures snapshots of your previous day's completed tasks before daily habit respawns occur.
-🛠️ Tech Stack & Dependencies
-Language: C# 12
-Framework: .NET 8.0 Windows Desktop (WPF)
-Editor Engine: AvalonEdit (High-performance WPF text editor with custom syntax colorizers)
-Architecture: MVVM via CommunityToolkit.Mvvm
-Styling: Custom Cyberpunk Dark Acrylic vector styles & drop-shadow neon glow shaders
-Interoperability: Win32 API User32 bindings (RegisterHotKey, UnregisterHotKey)
-📄 License
-This project is open-sourced under the 
+## 💾 Storage & Data Architecture
 
-MIT License
-. Feel free to use, modify, and distribute it for personal and commercial projects.
+DevHUD stores data locally on your machine with **zero telemetry and complete privacy**:
+
+- **Active Storage:**  
+  `%LocalAppData%\DevHUD\scratchpad_data.json`  
+  *(Resolved to `C:\Users\<Username>\AppData\Local\DevHUD\scratchpad_data.json`)*
+  - Stores all workspace tabs, notes, window states, and language preferences.
+- **Automated Daily Backups:**  
+  `%LocalAppData%\DevHUD\snapshots\snapshot_YYYYMMDD.json`  
+  - Automatically captures snapshots of your previous day's completed tasks before daily habit respawns occur.
+
+---
+
+## 🛠️ Tech Stack & Dependencies
+
+- **Language:** C# 12
+- **Framework:** .NET 8.0 Windows Desktop (WPF)
+- **Editor Engine:** [AvalonEdit](https://github.com/icsharpcode/AvalonEdit) (High-performance WPF text editor with custom syntax colorizers)
+- **Architecture:** MVVM via [CommunityToolkit.Mvvm](https://learn.microsoft.com/dotnet/communitytoolkit/mvvm/)
+- **Styling:** Custom Cyberpunk Dark Acrylic vector styles & drop-shadow neon glow shaders
+- **Interoperability:** Win32 API User32 bindings (`RegisterHotKey`, `UnregisterHotKey`)
+
+---
+
+## 📄 License
+
+This project is open-sourced under the [MIT License](LICENSE).
+Feel free to use, modify, and distribute it for personal and commercial projects.
