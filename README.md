@@ -1,7 +1,7 @@
 # ⚡ DevHUD — Tactical Command Scratchpad & Task Runner
 
 <p align="center">
-  <img src="DevHUD - Command Scratchpad/DevHUD - Command Scratchpad/Resources/app_icon.png" alt="DevHUD Logo" width="128" height="128" />
+  <img src="DevHUD - Command Scratchpad/Resources/app_icon.png" alt="DevHUD Logo" width="128" height="128" />
 </p>
 
 <p align="center">
