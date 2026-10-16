@@ -99,6 +99,8 @@ DevHUD utilizes a lightweight, human-readable syntax that colorizes dynamically:
 - Architecture discussion notes:
   - Use JWT tokens with refresh mechanism
   - Cache response in Redis
+```
+
 📥 Installation & Running
 Option 1: Standalone Portable Binary (Recommended)
 DevHUD is distributed as a self-contained, zero-dependency portable executable.
